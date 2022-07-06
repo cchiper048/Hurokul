@@ -1,0 +1,7 @@
+@include "10stream"
+i32 main() {
+    i32 num1 = 69;
+    char ch = 'a';
+    string str = "Hello Peter";
+    return 0;
+}
