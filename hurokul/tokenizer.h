@@ -1,9 +1,11 @@
-#pragma once
+#ifndef HUROKUL_TOKENIZER_H
+#define HUROKUL_TOKENIZER_H
+
 #include "./includes.h"
 
 typedef enum TokenType {
-    TOKEN_NAME = 0,         // 
-    TOKEN_VALUE,            // 
+    TOKEN_NAME = 0,         //
+    TOKEN_VALUE,            //
     TOKEN_ASSIGN,           // =
     TOKEN_ADD,              // +
     TOKEN_SUBTRACT,         // -
@@ -71,12 +73,15 @@ static inline const char *getTokenTypeName(TokenType type) {
 
 
 class Tokenizer {
-    public:
-        Tokenizer(std::string &input, size_t line);
-        std::optional<Token> next();
+public:
+    Tokenizer(std::string &input, size_t line);
+    std::optional<Token> next();
 
-    private:
-        std::string &t_input;
-        size_t line {0};
-        size_t t_index {0};
+private:
+    std::string &t_input;
+    size_t line {0};
+    size_t t_index {0};
 };
+
+
+#endif

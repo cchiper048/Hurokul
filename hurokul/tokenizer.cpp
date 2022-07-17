@@ -1,4 +1,4 @@
-#include "./tokenizer.h"
+#include "tokenizer.h"
 
 Tokenizer::Tokenizer(std::string &input, size_t line):  t_input(input), line(line) {}
 
@@ -85,7 +85,7 @@ std::optional<Token> Tokenizer::next() {
                 else { // &&
                     token.type = TOKEN_AND;
                     ++ t_index;
-                } 
+                }
                 ++ t_index;
                 return token;
             case '|':
@@ -93,7 +93,7 @@ std::optional<Token> Tokenizer::next() {
                 else { // ||
                     token.type = TOKEN_OR;
                     ++ t_index;
-                } 
+                }
                 ++ t_index;
                 return token;
             case '!':
@@ -101,7 +101,7 @@ std::optional<Token> Tokenizer::next() {
                 else { // !=
                     token.type = TOKEN_NOT_EQUALS;
                     ++ t_index;
-                } 
+                }
                 ++ t_index;
                 return token;
             case '$':
@@ -167,7 +167,7 @@ std::optional<Token> Tokenizer::next() {
                         case '!' :
                         case '$' :
                         case '\'':
-                        // case '"' :
+                            // case '"' :
                             done = true;
                             break;
                         default:
@@ -185,4 +185,3 @@ std::optional<Token> Tokenizer::next() {
 
     return {};
 }
-

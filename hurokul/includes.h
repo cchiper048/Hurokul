@@ -1,4 +1,5 @@
-#pragma once
+#ifndef HUROKUL_INCLUDES_H
+#define HUROKUL_INCLUDES_H
 
 #include <iostream>
 #include <cstdint>
@@ -9,3 +10,5 @@
 #include <optional>
 #include <map>
 #include <fstream>
+
+#endif
